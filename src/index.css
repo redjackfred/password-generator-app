@@ -1,0 +1,129 @@
+@import "tailwindcss";
+
+@theme {
+	--color-white: #ffffff;
+	--color-black: #000000;
+	--color-grey-950: #08070b;
+	--color-grey-900: #14131b;
+	--color-grey-850: #18171f;
+	--color-grey-800: #24232c;
+	--color-grey-700: #54535b;
+	--color-grey-600: #817d92;
+	--color-grey-200: #e6e5ea;
+	--color-green-200: #a4ffaf;
+	--color-yellow-300: #f8cd65;
+	--color-orange-400: #fb7c58;
+	--color-red-500: #f64a4a;
+}
+
+@layer components {
+	.gradient1 {
+		background: linear-gradient(90deg, #14131b 0%, #08070b 100%);
+	}
+	.text-preset-1 {
+		font-family: "JetBrains Mono", monospace;
+		font-weight: 700;
+		font-size: 32px;
+		line-height: 42px;
+	}
+	.text-preset-2 {
+		font-family: "JetBrains Mono", monospace;
+		font-weight: 700;
+		font-size: 24px;
+		line-height: 32px;
+	}
+	.text-preset-3 {
+		font-family: "JetBrains Mono", monospace;
+		font-weight: 700;
+		font-size: 18px;
+		line-height: 24px;
+	}
+	.text-preset-4 {
+		font-family: "JetBrains Mono", monospace;
+		font-weight: 700;
+		font-size: 16px;
+		line-height: 20px;
+	}
+	.custom-slider-thumb {
+		/* ... (other styles for the slider if you have them) ... */
+
+		&::-moz-range-thumb {
+			width: 28px; /* Adjust size as needed */
+			height: 28px; /* Adjust size as needed */
+			background-color: var(--color-grey-200);
+			border-radius: 50%; /* Make it an oval/circle */
+			cursor: pointer;
+			border: none; /* Remove default border */
+			box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+			transition: transform 0.15s ease-in-out; /* Optional */
+		}
+		&::-moz-range-track {
+			height: 8px;
+			background-color: var(--color-grey-850);
+		}
+		&::-moz-range-progress {
+			height: 8px;
+			background-color: var(--color-green-200);
+		}
+
+		&::-moz-range-thumb:hover {
+			/* This class will be applied to the input element */
+			&::-webkit-slider-thumb {
+				-webkit-appearance: none; /* Remove default */
+				appearance: none;
+				width: 16px; /* Adjust size as needed */
+				height: 16px; /* Adjust size as needed */
+				background-color: theme("colors.white"); /* White background */
+				border-radius: 50%; /* Make it an oval/circle */
+				cursor: pointer;
+				/* Adjust margin-top to vertically center the thumb */
+				margin-top: -4px; /* Half of (height - track height) */
+				box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+				transition: transform 0.15s ease-in-out; /* Optional: for hover/active effects */
+			}
+
+			&::-webkit-slider-thumb:hover {
+				transform: scale(1.1); /* Optional: slight scale on hover */
+			}
+
+			&::-webkit-slider-thumb:active {
+				transform: scale(0.95); /* Optional: slight scale down on active */
+			}
+			box-sizing: border-box;
+			background-color: var(--color-grey-850); /* Change color on hover */
+			border: solid 2px var(--color-green-200);
+		}
+
+		&::-moz-range-thumb:active {
+			transform: scale(0.95); /* Optional */
+		}
+
+		&::-webkit-slider-thumb {
+			-webkit-appearance: none; /* Remove default */
+			appearance: none;
+			width: 16px; /* Adjust size as needed */
+			height: 16px; /* Adjust size as needed */
+			background-color: var(--color-grey-200); /* White background */
+			border-radius: 50%; /* Make it an oval/circle */
+			cursor: pointer;
+			/* Adjust margin-top to vertically center the thumb */
+			margin-top: -4px; /* Half of (height - track height) */
+			box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+			transition: transform 0.15s ease-in-out; /* Optional: for hover/active effects */
+		}
+
+		&::-webkit-slider-thumb:hover {
+			box-sizing: border-box;
+			background-color: var(--color-grey-850); /* Change color on hover */
+			border: solid 2px var(--color-green-200);
+		}
+
+		&::-webkit-slider-thumb:active {
+			transform: scale(0.95); /* Optional: slight scale down on active */
+		}
+		&::-webkit-slider-runnable-track {
+			height: 8px;
+			background-color: var(--color-grey-850);
+		}
+	}
+}
