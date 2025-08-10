@@ -11,7 +11,11 @@ export default function CheckBox({
 		<button type="button" className="h-5 w-5" onClick={handleClick}>
 			{isChecked ? (
 				<div className="flex h-full items-center justify-center bg-green-200">
-					<img src={iconCheck} className="h-[10px] w-[12px]" />
+					<img
+						src={iconCheck}
+						className="h-[10px] w-[12px]"
+						alt="checked icon"
+					/>
 				</div>
 			) : (
 				<div className="box-border h-full w-full border-2 border-white"></div>
