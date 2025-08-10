@@ -3,8 +3,8 @@ import PasswordGenerator from "./PasswordGenerator";
 
 function App() {
 	return (
-		<div className="bg-grey-950 flex min-h-screen flex-col items-center justify-center">
-			<div className="flex w-full flex-col items-center justify-center px-4">
+		<div className="bg-grey-950 min-h-screen">
+			<div className="flex h-full w-full flex-col items-center px-4 py-[65px] md:py-[133px]">
 				<PasswordGenerator />
 			</div>
 		</div>
